@@ -6,6 +6,7 @@ import (
 
 type App struct {
 	PrometheusBind string `env:"PROMETHEUS_BIND" envDefault:":2112"`
+	DataStore      string `env:"DATA_STORE" envDefault:"./data"`
 }
 
 func ParseEnv() (*App, error) {
